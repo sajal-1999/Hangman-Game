@@ -54,7 +54,7 @@ def print_hangman(count):
 
     for i in hangman_pattern:
         print(i)
-    print('\n\n\n\n\n')
+    print('\n\n\n')
 
 def print_game_title():
     print('\n\n')
@@ -113,7 +113,7 @@ while(True):
     movie_name_length = len(movie_name)
 
     for i in range(0, movie_name_length):
-        if(bool(re.match('[\s\.\-\'\"\`\~\_\=]',movie_name[i]))):
+        if(bool(re.match('[\s\.\-\'\"\`\~\_\=\:\#\@\!\,\%\*]',movie_name[i]))):
             movie_guessed.append(movie_name[i])
         else:
             movie_guessed.append('-')
@@ -190,7 +190,7 @@ while(True):
         else:
             clear()
             print_game_title()
-            print('\n\n\n\n\n\t\tEnter a valid character! (A-Z, 0-9)\n\n\n')
+            print('\n\n\n\t\tEnter a valid character! (A-Z, 0-9)\n\n\n')
             print_hangman(count)
             print_movie_guessed(movie_guessed,'\n\n')
 
